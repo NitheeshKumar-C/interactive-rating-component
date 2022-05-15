@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <section class="main-section">
+      <section class="before-rating" id="br">
+        <div class="before-rating-content">
+          <div class="star">
+            <img class="star-img" src="images/icon-star.svg" alt="icon-star.svg">
+          </div>
+          <div class="content">
+            <h1>How did we do?</h1>
+            <p>Please let us know how we did with your support request. All feedback is appreciated 
+              to help us improve our offering!</p>
+          </div>
+          <div class="rating">
+              <input class="input-rating" onclick="ratingValue('1')" type="button" value="1">
+              <input class="input-rating" onclick="ratingValue('2')" type="button" value="2">
+              <input class="input-rating" onclick="ratingValue('3')" type="button" value="3">
+              <input class="input-rating" onclick="ratingValue('4')" type="button" value="4">
+              <input class="input-rating" onclick="ratingValue('5')" type="button" value="5">
+          </div>
+          <div id="error-div">
+            <span id="error"></span>
+          </div>
+          <div>
+            <button onclick="afterRating()" type="submit">SUBMIT</button>
+          </div>
+        </div>
+      </section>
+      <section class="after-rating" id="ar">
+        <div class="after-rating-content" >
+          <div class="ty">
+            <img class="ty-img" src="images/illustration-thank-you.svg" alt="illustration-thank-you.svg">
+          </div>
+          <div class="rating-div">
+            <p id="rating">You selected <span id="rv"></span> out of 5</p>
+          </div>
+          <div class="ar-content">
+            <h1>Thank you!</h1>
+            <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+              don’t hesitate to get in touch!</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
+      Coded by <a href="https://www.frontendmentor.io/profile/NitheeshKumar-C" target="_blank">NtheeshKumar</a>.
+    </div>
+  </main>
+  <script src="js/app.js"></script>
+  
+  
+</body>
+</html>
