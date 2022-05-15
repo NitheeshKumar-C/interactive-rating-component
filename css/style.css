@@ -111,10 +111,6 @@ button[type="submit"]{
     background-color: var(--neutralMediumGrey);
     color: var(--neutralWhite);
 }
-.input-rating:focus{
-    background-color: var(--primaryOrange);
-    color: var(--neutralWhite);
-}
 button[type="submit"]:hover{
     background-color: var(--neutralWhite);
     color: var(--primaryOrange);
