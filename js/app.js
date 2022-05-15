@@ -1,24 +1,19 @@
 var value;
-var oldValue;
+var oldValue='';
 var error=document.getElementById('error');
 var a;
 function ratingValue(v){
     value=v;
-    for(let i=1;i<=5;i++){
-    
-        if(value==i.toString())
-        {
-            a=document.getElementById(i);
-            a.style.backgroundColor="var(--primaryOrange)";
-            a.style.color="white";
-            oldValue=value;
-        }
-        else{
-            a=document.getElementById(i);
-            a.style.backgroundColor="hsl(212, 16%, 21%)";
-            a.style.color="var(--neutralLightGrey)";
-        }
+    if(oldValue!=''){
+        a=document.getElementsByClassName('input-rating')[parseInt(oldValue)-1];
+        a.style.backgroundColor="hsl(212, 16%, 21%)";
+        a.style.color="white";
+        oldValue='';
     }
+    a=document.getElementsByClassName('input-rating')[parseInt(value)-1];
+    a.style.backgroundColor="var(--primaryOrange)";
+    a.style.color="white";
+    oldValue=value;
 
     
     error.style.display="none";
