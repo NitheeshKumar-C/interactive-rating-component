@@ -8,7 +8,6 @@ function ratingValue(v){
     
         if(value==i.toString())
         {
-            console.log("yes "+i);
             a=document.getElementById(i);
             a.style.backgroundColor="var(--primaryOrange)";
             a.style.color="white";
